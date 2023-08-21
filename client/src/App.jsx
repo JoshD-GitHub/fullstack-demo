@@ -13,6 +13,7 @@ function App() {
 
       {token ? <Trains token={token} /> : <AuthForm setToken={setToken} />}
     </>
+    
   );
 }
 

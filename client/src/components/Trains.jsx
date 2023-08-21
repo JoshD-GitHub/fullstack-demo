@@ -18,23 +18,23 @@ const Trains = ({ token }) => {
 
   const formatTrain = (train) => {
     return (
-      <div key={`Train_${train.id}`}>
-        <h2>Train {train.id}</h2>
-        <ul>
-          <li>{train.color}</li>
-          <li>{train.fuelType}</li>
-          <li>Year: {train.year}</li>
-          <li>Range: {train.range}</li>
-        </ul>
-      </div>
+      <>
+        <div key={`Train_${train.id}`}>
+          <h2>Train {train.id}</h2>
+          <ul>
+            <li>{train.color}</li>
+            <li>{train.fuelType}</li>
+            <li>Year: {train.year}</li>
+            <li>Range: {train.range}</li>
+          </ul>
+        </div>
+      </>
     );
   };
 
   return (
     <>
-      {trains.map((t) => {
-        return formatTrain(t);
-      })}
+      {trains.map((t) => formatTrain(t))}
     </>
   );
 };
