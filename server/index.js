@@ -27,6 +27,7 @@ app.use((req, res, next) => {
   next();
 });
 
+//Middleware to serve static files
 app.use(express.static(path.join(__dirname, "..", "client/dist")));
 
 app.get("/", (req, res) => {
